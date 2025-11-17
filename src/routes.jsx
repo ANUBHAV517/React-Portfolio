@@ -11,7 +11,7 @@ import Projects from './pages/Projects';
 const router = createBrowserRouter(
   [
     {
-      path: '/React-Portfolio/',
+      path: '/',
       element: <App />, // This wraps all routes
       children: [
         { index: true, element: <Home /> }, // default index route '/'
