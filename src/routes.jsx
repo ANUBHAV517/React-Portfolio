@@ -8,21 +8,31 @@ import Frontend from './pages/Frontend';
 import Backend from './pages/Backend';
 import Projects from './pages/Projects';
 
+// Custom error component
+function RouteError() {
+  const error = useRouteError();
+  return (
+    <div>
+      <h1>Error: {error.status || 'Unknown'}</h1>
+      <p>{error.statusText || error.message || 'Page not found'}</p>
+    </div>
+  );
+}
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />, // This wraps all routes
+    element: <App />,
+    errorElement: <RouteError />, // Add errorElement here
     children: [
-      { index: true, element: <Home /> }, // default index route '/'
-      { path: 'home', element: <Home /> }, // default index route '/'
+      { index: true, element: <Home /> },
+      { path: 'home', element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'projects', element: <Projects /> },
-
       {
         path: 'services',
         element: <Services />,
         children: [
-          //   { index: true, element: <Services /> }, // default service subpage
           { path: 'backend', element: <Backend /> },
           { path: 'frontend', element: <Frontend /> },
         ],
