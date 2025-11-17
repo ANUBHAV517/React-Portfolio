@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import useIsMobile from '../hook/useIsMobile';
+import { Link } from 'react-router-dom';
 
 function About() {
   const sidebarOpen = useSelector((state) => state.sidebar.sidebarOpen);
@@ -104,13 +105,17 @@ function About() {
                   </div>
                   <div className="row">
                     <div className="buttons padd-15">
-                      <a
+                      {/* <a
                         href="#contact"
                         data-section-index="1"
                         className="btn hire-me"
                       >
                         Hire Me
-                      </a>
+                      </a> */}
+                      <Link to={'/contact'} className="btn hire-me">
+                        {' '}
+                        Hire Me
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -121,33 +126,23 @@ function About() {
                       <div className="progress">
                         <div
                           className="progress-in"
-                          style={{ width: '75%' }}
+                          style={{ width: '85%' }}
                         ></div>
-                        <div className="skill-percent">75%</div>
+                        <div className="skill-percent">85%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
-                      <h5>Node</h5>
+                      <h5>Redux</h5>
                       <div className="progress">
                         <div
                           className="progress-in"
-                          style={{ width: '40%' }}
+                          style={{ width: '85%' }}
                         ></div>
-                        <div className="skill-percent">40%</div>
+                        <div className="skill-percent">55%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
                       <h5>JavaScript</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: '65%' }}
-                        ></div>
-                        <div className="skill-percent">65%</div>
-                      </div>
-                    </div>
-                    <div className="skill-item padd-15">
-                      <h5>HTML</h5>
                       <div className="progress">
                         <div
                           className="progress-in"
@@ -157,7 +152,7 @@ function About() {
                       </div>
                     </div>
                     <div className="skill-item padd-15">
-                      <h5>CSS</h5>
+                      <h5>BootStrap</h5>
                       <div className="progress">
                         <div
                           className="progress-in"
@@ -167,23 +162,33 @@ function About() {
                       </div>
                     </div>
                     <div className="skill-item padd-15">
-                      <h5>BootStrap</h5>
+                      <h5>CSS</h5>
                       <div className="progress">
                         <div
                           className="progress-in"
-                          style={{ width: '50%' }}
+                          style={{ width: '75%' }}
                         ></div>
-                        <div className="skill-percent">50%</div>
+                        <div className="skill-percent">75%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
-                      <h5>Redux</h5>
+                      <h5>TailwindCss</h5>
                       <div className="progress">
                         <div
                           className="progress-in"
-                          style={{ width: '65%' }}
+                          style={{ width: '60%' }}
                         ></div>
-                        <div className="skill-percent">65%</div>
+                        <div className="skill-percent">60%</div>
+                      </div>
+                    </div>
+                    <div className="skill-item padd-15">
+                      <h5>HTML</h5>
+                      <div className="progress">
+                        <div
+                          className="progress-in"
+                          style={{ width: '90%' }}
+                        ></div>
+                        <div className="skill-percent">90%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
@@ -194,6 +199,16 @@ function About() {
                           style={{ width: '60%' }}
                         ></div>
                         <div className="skill-percent">60%</div>
+                      </div>
+                    </div>
+                    <div className="skill-item padd-15">
+                      <h5>Node</h5>
+                      <div className="progress">
+                        <div
+                          className="progress-in"
+                          style={{ width: '40%' }}
+                        ></div>
+                        <div className="skill-percent">40%</div>
                       </div>
                     </div>
                   </div>

@@ -8,6 +8,12 @@ function Home() {
   const sidebarOpen = useSelector((state) => state.sidebar.sidebarOpen);
   const isMobile = useIsMobile();
 
+  const publicUrl = import.meta.env.VITE_LOCAL_URL || '';
+  console.log(
+    import.meta.env.VITE_LOCAL_URL,
+    'process.env.PUBLIC_URL',
+    publicUrl
+  );
   return (
     <>
       {/* <Sidebar /> */}
@@ -34,7 +40,7 @@ function Home() {
               </p>
               <a
                 className="btn"
-                href="assets/AnubhavResume.pdf"
+                href={`${publicUrl}/assets/AnubhavResume.pdf`}
                 download="Anubhav_Srivastava_CV.pdf"
               >
                 Download Resume

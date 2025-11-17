@@ -139,7 +139,7 @@ ul {
   margin-left: -15px;
   margin-right: -15px;
   position: relative;
-  justify-content: center;
+
 }
 
 .btn {
@@ -449,6 +449,11 @@ h3.my-profession {
   color: var(--text-black-700);
   margin-left: 4px;
   display: inline-block;
+  word-break: break-word;
+  /* Allows breaking at soft wrap points */
+  overflow-wrap: break-word;
+  /* Ensures long words wrap */
+  white-space: normal;
 }
 
 .about .about-content .personal-info .buttons {
@@ -702,6 +707,11 @@ h3.my-profession {
 
 .project-tech {
   font-size: 13px;
+  color: #555;
+}
+
+.project-link {
+  font-size: 15px;
   color: #555;
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import useIsMobile from '../hook/useIsMobile';
+import { Link } from 'react-router-dom';
 
 function Projects() {
   const sidebarOpen = useSelector((state) => state.sidebar.sidebarOpen);
@@ -15,12 +16,12 @@ function Projects() {
       <div className="container">
         <div className="row">
           <div className="section-title padd-15">
-            <h2>Portfolio</h2>
+            <h2>Projects</h2>
           </div>
         </div>
         <div className="row">
           <div className="portfolio-heading padd-15">
-            <h2>My Last Projects</h2>
+            <h2>Company Projects</h2>
           </div>
         </div>
         <div className="row">
@@ -104,6 +105,40 @@ function Projects() {
                 </p>
                 <p className="project-tech">
                   <strong>Tech Used:</strong> React, Css, HTML, API Integration
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="portfolio-heading padd-15">
+            <h2>Personal Projects</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="portfolio-item padd-15">
+            <div className="portfolio-item-inner shadow-dark">
+              <div className="portfolio-content">
+                <h3 className="project-title">
+                  Professional Portfolio Web Application
+                </h3>
+                <p className="project-desc">
+                  A modern, responsive React-based portfolio website designed to
+                  showcase a professional developer’s complete profile. The
+                  portfolio highlights work experience, technical skills,
+                  project showcases, contact options, and downloadable CV
+                  functionality, providing a comprehensive digital resume.
+                </p>
+                <p className="project-tech">
+                  <strong>Tech Used:</strong> React.js, Redux , React Router,
+                  CSS, EmailJS (for contact form), Vite or Create React App, PDF
+                  download integration
+                </p>
+                <p className="project-link">
+                  <strong>Link:</strong>{' '}
+                  <Link to="https://anubhav517.github.io/React-Portfolio">
+                    Click to Visit
+                  </Link>
                 </p>
               </div>
             </div>

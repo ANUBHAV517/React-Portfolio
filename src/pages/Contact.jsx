@@ -35,7 +35,7 @@ function Contact() {
         </div>
         <h3 className="contact-title padd-15">Have You Any Question ?</h3>
         <h4 className="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
-        <div className="row">
+        <div className="row" style={{ justifyContent: 'center' }}>
           <div className="contact-info-item padd-15">
             <div className="icon">
               <FontAwesomeIcon icon={faMobile} className="fa" />

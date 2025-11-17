@@ -104,31 +104,51 @@ function Sidebar() {
       </ul> */}
         <ul className="nav">
           <li>
-            <NavLink className="menu" to={'/'}>
+            <NavLink
+              className="menu"
+              to={'/'}
+              onClick={() => dispatch(updateSideBar())}
+            >
               <FontAwesomeIcon icon={faHome} />
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink className="menu" to={'/about'}>
+            <NavLink
+              className="menu"
+              to={'/about'}
+              onClick={() => dispatch(updateSideBar())}
+            >
               <FontAwesomeIcon icon={faUser} />
               About
             </NavLink>
           </li>
           <li>
-            <NavLink className="menu" to={'/services'}>
+            <NavLink
+              className="menu"
+              to={'/services'}
+              onClick={() => dispatch(updateSideBar())}
+            >
               <FontAwesomeIcon icon={faList} />
               Services
             </NavLink>
           </li>
           <li>
-            <NavLink className="menu" to={'/projects'}>
+            <NavLink
+              className="menu"
+              to={'/projects'}
+              onClick={() => dispatch(updateSideBar())}
+            >
               <FontAwesomeIcon icon={faDiagramProject} />
               Projects
             </NavLink>
           </li>
           <li>
-            <NavLink className="menu" to={'/contact'}>
+            <NavLink
+              className="menu"
+              to={'/contact'}
+              onClick={() => dispatch(updateSideBar())}
+            >
               <FontAwesomeIcon icon={faComments} />
               Contact
             </NavLink>
