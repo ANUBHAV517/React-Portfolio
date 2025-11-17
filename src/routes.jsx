@@ -8,31 +8,28 @@ import Frontend from './pages/Frontend';
 import Backend from './pages/Backend';
 import Projects from './pages/Projects';
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <App />, // This wraps all routes
-      children: [
-        { index: true, element: <Home /> }, // default index route '/'
-        { path: 'home', element: <Home /> }, // default index route '/'
-        { path: 'about', element: <About /> },
-        { path: 'projects', element: <Projects /> },
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />, // This wraps all routes
+    children: [
+      { index: true, element: <Home /> }, // default index route '/'
+      { path: 'home', element: <Home /> }, // default index route '/'
+      { path: 'about', element: <About /> },
+      { path: 'projects', element: <Projects /> },
 
-        {
-          path: 'services',
-          element: <Services />,
-          children: [
-            //   { index: true, element: <Services /> }, // default service subpage
-            { path: 'backend', element: <Backend /> },
-            { path: 'frontend', element: <Frontend /> },
-          ],
-        },
-        { path: 'contact', element: <Contact /> },
-      ],
-    },
-  ]
-  // { basename: '/React-Portfolio' }
-);
+      {
+        path: 'services',
+        element: <Services />,
+        children: [
+          //   { index: true, element: <Services /> }, // default service subpage
+          { path: 'backend', element: <Backend /> },
+          { path: 'frontend', element: <Frontend /> },
+        ],
+      },
+      { path: 'contact', element: <Contact /> },
+    ],
+  },
+]);
 
 export default router;
