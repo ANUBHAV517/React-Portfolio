@@ -31,8 +31,8 @@ const router = createBrowserRouter(
         { path: 'contact', element: <Contact /> },
       ],
     },
-  ],
-  { basename: '/React-Portfolio' }
+  ]
+  // { basename: '/React-Portfolio' }
 );
 
 export default router;
